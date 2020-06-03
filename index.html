@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Coming soon Page</title>
+
+    <bgsound src = "bgmusic.mp3"/>
+
+
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+
+    <div class="container">
+      <h1>ManOTo</h1>
+      <h2>Tezliklə xidmətində :) </h2>
+      <div class="count">
+        <div class="countd">
+          <span id = days>00</span>
+          DAYS
+
+        </div>
+        <div class="countd">
+          <span id = hours>00</span>
+          HOURS
+
+        </div>
+        <div class="countd">
+          <span id = minutes>00</span>
+          MINUTES
+
+        </div>
+        <div class="countd">
+          <span id = seconds>00</span>
+          SECONDS
+
+        </div>
+      </div>
+
+    </div>
+
+
+<script type="text/javascript">
+
+  var count = new Date("jul 18,2020 00:00:00").getTime();
+  var x = setInterval(function(){
+    var now = new Date().getTime();
+    var d = count - now;
+
+    var days = Math.floor(d/(1000*60*60*24));
+    var hours = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+    var minutes = Math.floor((d%(1000*60*60))/(1000*60));
+    var seconds = Math.floor((d%(1000*60))/1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+
+
+
+
+
+  },1000);
+
+
+
+
+
+
+
+</script>
+
+
+
+  </body>
+</html>
